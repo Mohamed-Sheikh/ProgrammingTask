@@ -1,0 +1,10 @@
+[
+ {
+  "Error": "invalid url",
+  "url": "bad://address"
+ },
+ {
+  "Error": "invalid url",
+  "url": "bad://address"
+ }
+]

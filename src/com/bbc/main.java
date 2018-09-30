@@ -8,8 +8,12 @@ public class main {
 		
 		userInput user = new userInput();
 		user.data();
+		
 		dataPopulate dp = new dataPopulate();
 		dp.dataStream(user.getUserInput());
+		
+		OutputWriter output = new OutputWriter();
+		output.fileWrites(dp.getJsonDoc());
 	}
 
 }

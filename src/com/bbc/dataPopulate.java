@@ -29,29 +29,34 @@ public class dataPopulate {
 			try {
 				URL url = new URL(domains.get(i));
 				try {
-					HttpURLConnection con = (HttpURLConnection) url.openConnection();
+					HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 					/*
 					 * "The program should cope gracefully when it makes a request to a slow or
 					 * non-responsive web server"
 					 */
 
-					con.setReadTimeout(15000);
-					con.setConnectTimeout(15000);
+					connection.setReadTimeout(15000);
+					connection.setConnectTimeout(15000);
 
 					try {
 						JSON.put("Url", url);
-						JSON.put("status Code", con.getResponseCode());
+						JSON.put("status Code", connection.getResponseCode());
 
-						JSON.put("content_length", con.getContentLength());
-						JSON.put("date", new Date(con.getDate()));
+						JSON.put("content_length", connection.getContentLength());
+						JSON.put("date", new Date(connection.getDate()));
 						JSONArray.put(JSON);
 
 					} catch (JSONException jse) {
 						jse.printStackTrace();
 						System.err.print("problem with JSON Object");
 					}
-				} catch (IOException ioe) {
+				} 
+				/*
+				 * The program should identify and report invalid URLs, e.g. those that don't
+				 * start with http:// or https://, or contain characters not allowed in a URL
+				 */catch (IOException ioe) {
 
+					
 					System.err.println("URL doesn't exist");
 					try {
 						JSON.put("url", "bad://address");
@@ -88,6 +93,10 @@ public class dataPopulate {
 	public JSONArray getJsonDoc() {
 
 		return JSONArray;
+	}
+	public ArrayList<Integer> getBonusArrayList() {
+
+		return bonus;
 	}
 
 }
