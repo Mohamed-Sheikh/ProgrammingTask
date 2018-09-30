@@ -41,7 +41,7 @@ public class dataPopulate {
 					try {
 						JSON.put("Url", url);
 						JSON.put("status Code", connection.getResponseCode());
-
+						bonus.add(connection.getResponseCode());
 						JSON.put("content_length", connection.getContentLength());
 						JSON.put("date", new Date(connection.getDate()));
 						JSONArray.put(JSON);

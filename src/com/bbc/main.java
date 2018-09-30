@@ -14,6 +14,13 @@ public class main {
 		
 		OutputWriter output = new OutputWriter();
 		output.fileWrites(dp.getJsonDoc());
+		
+		AdditionalTask at = new AdditionalTask();
+		at.SortData(dp.bonus);
+		
+		output.AdditionalTaskFileWriter(AdditionalTask.JArray);
+		
+		
 	}
 
 }

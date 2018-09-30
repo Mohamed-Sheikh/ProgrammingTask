@@ -17,10 +17,12 @@ public class OutputWriter {
 	
 
 		FileWriter fw = new FileWriter("Output.json");
+		
 		try {
 		fw.write(dp.getJsonDoc().toString(1));
 		fw.flush();
 		fw.close();
+		
 		
 		
 		
@@ -35,4 +37,20 @@ public class OutputWriter {
 	System.out.println("check output file named 'Output.json'");
 	}
 
+	public void AdditionalTaskFileWriter (JSONArray jsonArray) {
+		
+		try {
+		FileWriter AdditionalTaskFW = new FileWriter("AdditionalTask.json");
+		try {
+		AdditionalTaskFW.write(jsonArray.toString(1));
+		AdditionalTaskFW.flush();
+		AdditionalTaskFW.close();
+		}catch(JSONException jse) {
+			jse.printStackTrace();
+		}
+		
+	}catch(IOException ioe) {
+		
+	}
+}
 }
