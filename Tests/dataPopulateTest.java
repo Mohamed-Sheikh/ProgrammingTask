@@ -29,7 +29,7 @@ public class dataPopulateTest {
 	 * 
 	 */
 	@Test
-	public void JSONArrayIsPopulatedCorrectly() throws Exception {
+	public void JSONArrayPopulatesCorrectly() throws Exception {
 
 		websites.add("https://www.bbc.com");
 		websites.add("https://www.itv.com");
@@ -49,7 +49,7 @@ public class dataPopulateTest {
 	 */
 
 	@Test
-	public void badUrlReturnsCorrectMessage() throws Exception {
+	public void badUrlReturnCorrectMessage() throws Exception {
 
 		websites.add("test");
 

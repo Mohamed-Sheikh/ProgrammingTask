@@ -52,5 +52,7 @@ public class OutputWriter {
 	}catch(IOException ioe) {
 		
 	}
+		System.out.println("check output file named 'AdditionalTask.json'");
+		
 }
 }

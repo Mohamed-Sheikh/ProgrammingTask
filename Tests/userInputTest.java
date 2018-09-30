@@ -1,6 +1,6 @@
 /*****************************************************************************/
 /*                           Test Cases										 */
-/*					(Requires users input to run tests) 					 */
+/*					(Requires user input to run tests) 					     */
 /* 		                           										     */
 /*****************************************************************************/
 import static org.junit.Assert.*;
@@ -22,7 +22,7 @@ public class userInputTest {
 	 * in the data type (ArrayList)
 	 */
 	@Test
-	public void URLIsStoredCorrectly() {
+	public void URLsStoredCorrectly() {
 		userInput.data();
 
 		assertEquals(userInput.noOfUrl, userInput.getUserInput().size());
