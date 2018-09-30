@@ -22,7 +22,9 @@ public class userInput {
 		 numberOfUrls = input.nextInt();
 		
 		
-		
+		/*
+		 * For loop to populate ArrayList with users URL
+		 */
 		for (int i = 0; i < numberOfUrls; i++) {
 			System.out.println("enter url " + (1 + i));
 			URLs.add(input.next());
@@ -31,13 +33,13 @@ public class userInput {
 
 		System.out.println(URLs);
 	}
+	
 	public int getNumberChoice() {
-		
+		/*
+		 * Used for testing purposes, so i can access the variable
+		 */
 		return numberOfUrls;
 	}
 	
-	public static void main (String[] args) {
-		userInput ui = new userInput();
-		ui.data();
-	}
+
 }

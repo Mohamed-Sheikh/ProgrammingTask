@@ -22,4 +22,13 @@ public class userInputTest {
 	 
 	 
 	}
+	@Test
+	public void arrayListNotNull () {
+	
+		//testing that the arraylist has been populated
+	
+		assertNotNull(userInput.URLs.size());
+	
+	
+	}
 }
