@@ -1,13 +1,15 @@
 package com.bbc;
 
+
 public class main {
 	
 	
 	public static void main (String[] args) {
-		userInput ui = new userInput();
-		ui.data();
+		
+		userInput user = new userInput();
+		user.data();
 		dataPopulate dp = new dataPopulate();
-		dp.dataStream();
+		dp.dataStream(user.getUserInput());
 	}
 
 }
